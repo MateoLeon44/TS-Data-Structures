@@ -28,3 +28,4 @@ export class SingleLinkedList<T> {
     return false
   }
 }
+
