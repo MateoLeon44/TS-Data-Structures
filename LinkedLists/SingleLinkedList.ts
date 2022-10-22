@@ -14,7 +14,7 @@ export class SingleLinkedList<T> {
   }
 
   get size (): number {
-    return this.size
+    return this._size
   }
 
   set size (sizeParam: number) {
