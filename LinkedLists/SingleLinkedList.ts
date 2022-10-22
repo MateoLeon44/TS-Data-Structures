@@ -10,6 +10,7 @@ export class SingleLinkedList<T> {
 
   set head (headParam:LinkedListNode<T> | null) {
     this._head = headParam
+    this.size++
   }
 
   get size (): number {
@@ -18,5 +19,12 @@ export class SingleLinkedList<T> {
 
   set size (sizeParam: number) {
     this._size = sizeParam
+  }
+
+  insertAtIndex (node: LinkedListNode<T>, index: number): boolean {
+    if (this.size === 0) {
+      this.head = node
+    }
+    return false
   }
 }
