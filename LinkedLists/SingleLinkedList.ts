@@ -22,10 +22,19 @@ export class SingleLinkedList<T> {
   }
 
   insertAtIndex (node: LinkedListNode<T>, index: number): boolean {
-    if (this.size === 0) {
+    if (index > this.size) {
+      return false
+    }
+    if (index === 0) {
+      node.next = this.head
       this.head = node
     }
-    return false
+    if (index === this.size) {
+
+    }
+    return true
   }
+
+
 }
 
