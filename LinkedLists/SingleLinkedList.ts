@@ -21,6 +21,15 @@ export class SingleLinkedList<T> {
     this._size = sizeParam
   }
 
+  findByIndex = (index: number): LinkedListNode<T> | undefined => {
+    let nodeToReturn = this.head
+    if (!nodeToReturn) return
+    for (let i = 0; i < index; i++) {
+      if (!nodeToReturn.next) return nodeToReturn
+      nodeToReturn = nodeToReturn.next
+    }
+  }
+
   insertAtIndex (node: LinkedListNode<T>, index: number): boolean {
     if (index > this.size) {
       return false
